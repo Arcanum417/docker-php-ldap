@@ -8,3 +8,4 @@ RUN set -x \
     && docker-php-ext-install ldap \
     && apt-get purge -y --auto-remove libldap2-dev
 RUN a2enmod rewrite
+RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
